@@ -14,7 +14,6 @@ Notes
 
 - Built for use on Windows & Linux as I need this to run on a Raspberry Pi 4
 - This project is tailored to my personal needs, therefore, there may be some weird code
-- I'm not looking for contributors - this code may or may not be updated when it breaks, depending on if I need it or not
 - The removal of OSC does sort-of kill the point of the original repo, however, I'm using remote GPIO as I'm using a Raspberry Pi 4 for light control and it's the easiest way to implement it
 
 Required modules
