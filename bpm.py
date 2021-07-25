@@ -218,8 +218,23 @@ class AudioAnalyzer:
         # print(variance)
         return numpy.max([-15 * variance + 1.55, 1.2])
 
+    from enum import Enum
+    class Colour(Enum):
+        HEADER = '\033[95m'
+        OKBLUE = '\033[94m'
+        OKCYAN = '\033[96m'
+        OKGREEN = '\033[92m'
+        WARNING = '\033[93m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+        BOLD = '\033[1m'
+        UNDERLINE = '\033[4m'
+
+    colourIndex = 0
+
     def detect_beat(self, time_since_last_beat):
-        print("Detected: Beat")
+        print(list(self.Colour)[self.colourIndex].value + "BEAT")
+        self.colourIndex = (self.colourIndex + 1) % len(list(self.Colour))
         bpm_detected = 60 / time_since_last_beat
         if len(self.bpm_history) < 8:
             if bpm_detected > self.min_bpm:
