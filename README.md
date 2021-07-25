@@ -2,9 +2,12 @@ Flashy Lamp Thing
 =================
 ### A fork of [Christian Scheb's Sound-To-Light-OSC](https://github.com/scheb/sound-to-light-osc), customised for remote GPIO in place of OSC.
 
-"Real-time detection of beats with Python from an audio input device (typically "Stereo Mix")"
+"Real-time detection of beats with Python from an audio input device (typically 'Stereo Mix')"
+
+[🎥 YouTube Livestream Involving This Project](https://www.youtube.com/watch?v=NwTgbfzS-9w)
 
 ![Image: The lamp that shall flash](lamp.png)
+I received this lamp as apart of a secret santa and have loved it ever since. It's internal electronics are really simple, allowing me to do this project without risking the lamp (or my life I guess).
 
 Notes
 -----
@@ -26,9 +29,9 @@ Execution
 ---------
 Simply run either from the commandline or directly
 
-**beatDetector.py** - Runs normally, with console and GUI
+[**beatDetector.py**](beatDetector.py) - Runs normally, with console and GUI
 
-**beatDetectorNoConsole.pyw** - Just runs with the GUI
+[**beatDetectorNoConsole.pyw**](beatDetectorNoConsole.pyw) - Just runs with the GUI
 
 Acknowledgments
 ---------------
