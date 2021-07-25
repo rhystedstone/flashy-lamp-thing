@@ -1,65 +1,36 @@
-sound-to-light-osc
-==================
+Flashy Lamp Thing
+=================
+### A fork of [Christian Scheb's Sound-To-Light-OSC](https://github.com/scheb/sound-to-light-osc), customised for remote GPIO in place of OSC.
 
-Real-time detection of beats with Python from an audio input device (typically "Stereo Mix"). Outputs OSC signals,
-to be used for sound-to-light control.
+"Real-time detection of beats with Python from an audio input device (typically "Stereo Mix")"
 
-It keeps track of the music "intensity" (calm, normal, intense) to switch lighting programs.
+[Image: The lamp that shall flash](lamp.jpg)
 
-I use [QLC+](https://github.com/mcallegari/qlcplus) for DMX control.
+Notes
+-----
 
-![Video](video.gif)
+- Built for use on Windows & Linux as I need this to run on a Raspberry Pi 4
+- This project is tailored to my personal needs, therefore, there may be some weird code
+- I'm not looking for contributors - this code may or may not be updated when it breaks, depending on if I need it or not
+- The removal of OSC does sort-of kill the point of the original repo, however, I'm using remote GPIO as I'm using a Raspberry Pi 4 for light control and it's the easiest way to implement it
 
 Required modules
 ----------------
 
-- PyAudio
-- PyQt5
-- PyQwt
-- matplotlib
-- scipy
-- python-osc
+- [PyAudio](https://pypi.org/project/PyAudio) (If installation fails, try installing [pipwin](https://pypi.org/project/pipwin) then using `pipwin install pyaudio`)
+- [PyQt5](https://pypi.org/project/PyQt5)
+- [matplotlib](https://pypi.org/project/matplotlib)
+- [scipy](https://pypi.org/project/scipy)
 
-Usage
------
+Execution
+---------
+Simply run either from the commandline or directly
 
-`python beatDetector.py`
+**beatDetector.py** - Runs normally, with console and GUI
 
-OSC Signals
------------
-
-OSC signals are sent to `localhost:7701`, can be changed in `beatDetector.py`.
-
-- `/beat` is sent for every beat detected.
-- `/bar` is sent every to change the lighting scene.
-- `/prog1` - `/prog8` is sent to change lighting programs (available have to be configured in `beatDetector.py`)
+**beatDetectorNoConsole.pyw** - Just runs with the GUI
 
 Acknowledgments
 ---------------
 
-Based on [shunfu/python-beat-detector](https://github.com/shunfu/python-beat-detector).
-
-Version History
----------------
-
-### 1.0
-
-- Beat detection
-- Automatic beat generation based on BPM
-- Pause and new song detection
-
-### 1.1
-
-- Improved max volume calibration
-- Improved pause detection
-- Intensity detection
-- Automatic lighting program switch
-
-Support Me
-----------
-I love to hear from people using my work, it's giving me the motivation to keep working on it.
-
-If you want to let me know you're finding it useful, please consider giving it a star ⭐ on GitHub.
-
-If you love my work and want to say thank you, you can help me out for a beer 🍻️
-[via PayPal](https://paypal.me/ChristianScheb).
+Based on [scheb/python-beat-detector](https://github.com/scheb/sound-to-light-osc), which itself is based on [shunfu/python-beat-detector](https://github.com/shunfu/python-beat-detector)
