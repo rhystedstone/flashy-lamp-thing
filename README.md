@@ -4,7 +4,7 @@ Flashy Lamp Thing
 
 "Real-time detection of beats with Python from an audio input device (typically "Stereo Mix")"
 
-[Image: The lamp that shall flash](lamp.jpg)
+![Image: The lamp that shall flash](lamp.jpg)
 
 Notes
 -----
